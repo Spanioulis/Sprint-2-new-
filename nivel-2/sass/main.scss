@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$primary: #5265E1;
+$secondary: #FA5959;
+$light: rgb(255, 255, 255);
+$success: rgb(230, 230, 230);
+$dark: rgb(1, 1, 70);
+
+$font-family-base: 'Rubik', sans-serif;
+
+$card-border-color: none;
+
+$nav-link-padding-y: .8rem;
+$nav-link-color: #4d4e4e;
+$nav-tabs-link-active-color: black;
+$nav-link-font-size: 0.9rem;
+
+$btn-font-size: 0.9rem;
+$btn-padding-x: 1.2rem;
+
+$accordion-button-color: #5265E1;
+
+$accordion-color: #747474;
+
+$input-placeholder-color: #d4d4d4;
+
+* {
+    box-sizing: border-box;
+}
+
+section {
+    margin-top: 3rem;
+  }
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.card-text {
+    color: rgb(167, 161, 161);
+    font-size: 1rem;
+    opacity: 0.7;
+    margin-top: 0.4rem;
+}
+
+.position-right-figure {
+    display: flex;
+    justify-content: flex-end;
+}
+.form-right {
+    background: #5265E1;
+    border-bottom-left-radius: 30%;
+    height: 350px;
+    width: 525px;
+    margin-top: -20.5rem;
+    z-index: -1;
+}
+
+#features {
+    .position-left-figure {
+        display: flex;
+        justify-content:center;
+    }
+    .form-left {
+        background: #5265E1;
+        border-bottom-right-radius: 30%;
+        height: 350px;
+        width: 525px;
+        margin-top: -17rem;
+        z-index: -1;
+    }
+}
+
+#navegador {
+    border-radius: 5%;
+    box-shadow: 5px 5px 10px rgb(196, 194, 194);
+
+    .card-img-top {
+        margin: auto;
+        padding-top: 1.5rem;
+        padding-bottom: 0.8rem;
+    }
+    
+    .card-text {
+        color: rgb(167, 161, 161);
+        font-size: 1rem;
+        opacity: 0.7;
+        margin-top: 0.4rem;
+    }
+    
+    .card-body {
+        text-align: center;
+    }
+}
+
+footer {
+    background-color: #031633;
+    color: white;
+
+    #contact {
+        button {
+            width: 130px;
+            max-height: 38px;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+
+
+/* Using SCSS variables to store breakpoints */
+
+/* El web responsive se ve correctamente a 400px, aunque haya puesto el breakpoint en 768px. Para terminar de depurar la versión en tablet debería añadir el breakpoint para smartphone (de <=576px, por ejemplo) y retocar el breakpoint inferior */
+
+$breakpoint-tablet: 768px;
+@media (max-width: $breakpoint-tablet) {
+
+header {
+    nav {
+        margin: 0 1rem 0 1rem;
+    }
+}
+
+    .card {
+        text-align: center;
+    }  
+
+    .form-right {
+        background: #5265E1;
+        border-bottom-left-radius: 30%;
+        height: 200px;
+        width: 300px;
+        margin-top: -33rem;
+        z-index: -1;
+    }
+
+    #features {
+        .form-left {
+            background: #5265E1;
+            border-bottom-right-radius: 30%;
+            height: 200px;
+            width: 300px;
+            margin-top: -31.5rem;
+            z-index: -1;
+        }
+    }
+
+    footer {   
+        #contact {
+            form {
+                flex-direction: column;
+                align-items: center !important;
+                gap: 1rem;
+            }
+            button {
+                width: 100%;
+                max-height: 38px;
+                font-size: 0.8rem;
+            }
+        }
+
+        nav {
+          .container {
+            flex-direction: column !important;
+          }
+      
+          .rrss {
+            ul {
+              flex-direction: row !important;
+            }
+          }
+        }
+      }
+}
+
+// Usar el sasspurge al final del ejercicio.
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
